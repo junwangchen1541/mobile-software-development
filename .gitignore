@@ -1,0 +1,7 @@
+# WeChat DevTools user-specific settings
+project.private.config.json
+
+# Local dependencies and operating-system files
+node_modules/
+.DS_Store
+Thumbs.db

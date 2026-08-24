@@ -1,0 +1,133 @@
+.page {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 48rpx 48rpx calc(44rpx + env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  background: #f5f7fa;
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translateY(-36rpx);
+}
+
+.mark {
+  box-sizing: border-box;
+  width: 144rpx;
+  height: 144rpx;
+  margin-bottom: 54rpx;
+  padding: 34rpx 28rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12rpx;
+  background: #07c160;
+  border-radius: 32rpx;
+  box-shadow: 0 18rpx 40rpx rgba(7, 193, 96, 0.2);
+}
+
+.mark-dot {
+  width: 14rpx;
+  height: 14rpx;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.mark-line {
+  width: 58rpx;
+  height: 10rpx;
+  background: rgba(255, 255, 255, 0.76);
+  border-radius: 5rpx;
+}
+
+.mark-line-long {
+  width: 86rpx;
+  background: #ffffff;
+}
+
+.eyebrow {
+  margin-bottom: 20rpx;
+  color: #87909f;
+  font-size: 22rpx;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.title {
+  color: #172033;
+  font-size: 68rpx;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.message {
+  min-height: 44rpx;
+  margin-top: 22rpx;
+  color: #5e6878;
+  font-size: 29rpx;
+  line-height: 1.6;
+}
+
+.hello-button {
+  width: 260rpx;
+  height: 88rpx;
+  margin-top: 58rpx;
+  padding: 0;
+  color: #ffffff;
+  background: #172033;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  line-height: 88rpx;
+}
+
+.hello-button-hover {
+  background: #2a3548;
+  transform: translateY(2rpx);
+}
+
+.success {
+  box-sizing: border-box;
+  height: 88rpx;
+  margin-top: 58rpx;
+  display: flex;
+  align-items: center;
+  gap: 14rpx;
+  color: #078f49;
+  font-size: 28rpx;
+}
+
+.success-icon {
+  width: 40rpx;
+  height: 40rpx;
+  color: #ffffff;
+  background: #07c160;
+  border-radius: 50%;
+  font-size: 26rpx;
+  font-weight: 700;
+  line-height: 40rpx;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14rpx;
+  color: #87909f;
+  font-size: 22rpx;
+}
+
+.status-dot {
+  width: 12rpx;
+  height: 12rpx;
+  background: #07c160;
+  border-radius: 50%;
+}

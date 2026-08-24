@@ -1,0 +1,32 @@
+<view class="page">
+  <view class="hero">
+    <view class="mark" aria-label="Hello World 图标">
+      <view class="mark-dot"></view>
+      <view class="mark-line mark-line-long"></view>
+      <view class="mark-line"></view>
+    </view>
+
+    <text class="eyebrow">2026夏 移动软件开发 刘翼晨</text>
+    <text class="title">Hello World</text>
+    <text class="message">{{message}}</text>
+
+    <button
+      wx:if="{{!greeted}}"
+      class="hello-button"
+      bindtap="sayHello"
+      hover-class="hello-button-hover"
+    >
+      Say Hello
+    </button>
+
+    <view wx:else class="success">
+      <text class="success-icon">✓</text>
+      <text>问候成功</text>
+    </view>
+  </view>
+
+  <view class="footer">
+    <view class="status-dot"></view>
+    <text>Mini Program is ready</text>
+  </view>
+</view>
