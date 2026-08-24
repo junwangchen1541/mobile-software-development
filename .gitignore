@@ -1,7 +1,12 @@
 # WeChat DevTools user-specific settings
 project.private.config.json
+**/project.private.config.json
 
 # Local dependencies and operating-system files
 node_modules/
+**/node_modules/
 .DS_Store
 Thumbs.db
+
+# Experiment reports are submitted separately
+/实验*.md
