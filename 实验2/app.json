@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#0e263d",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "个人名片",
+    "backgroundColor": "#f4f7f8",
+    "backgroundTextStyle": "light"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

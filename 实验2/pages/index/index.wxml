@@ -1,0 +1,80 @@
+<scroll-view class="page" scroll-y enhanced>
+  <view class="cover-wrap">
+    <image class="cover" src="/assets/card-header.svg" mode="aspectFill" />
+    <view class="cover-shade"></view>
+    <view class="cover-copy">
+      <text class="cover-kicker">PERSONAL CARD / 2026</text>
+      <text class="cover-title">把好奇心，做成小作品</text>
+      <text class="cover-caption">Mobile development learner</text>
+    </view>
+  </view>
+
+  <view class="profile-panel">
+    <view class="identity-row">
+      <view class="avatar">LYC</view>
+      <view class="identity-copy">
+        <view class="name-line">
+          <text class="name">刘翼晨</text>
+          <text class="verified">在学习</text>
+        </view>
+        <text class="role">移动软件开发学习者</text>
+        <text class="school">中国海洋大学 · 2026 夏</text>
+      </view>
+      <button class="favorite-button {{isFavorite ? 'favorite-active' : ''}}" bindtap="toggleFavorite" aria-label="收藏名片">
+        <text>{{isFavorite ? '★' : '☆'}}</text>
+      </button>
+    </view>
+
+    <view class="divider"></view>
+
+    <view class="intro-block">
+      <view class="section-heading">
+        <text class="section-title">关于我</text>
+        <text class="section-index">01</text>
+      </view>
+      <text class="intro-text">我喜欢把抽象的想法做成能被点击、被理解的小作品。现在正在学习微信小程序开发，也在练习用更清晰的方式表达自己。</text>
+      <text wx:if="{{expanded}}" class="intro-more">从课程练习到个人项目，我希望保持记录和复盘，让每一次尝试都留下可见的进步。</text>
+      <button class="text-button" bindtap="toggleIntro">{{expanded ? '收起介绍' : '展开介绍'}} <text class="arrow">{{expanded ? '↑' : '↓'}}</text></button>
+    </view>
+
+    <view class="stats-row">
+      <view class="stat">
+        <text class="stat-value">03</text>
+        <text class="stat-label">学习方向</text>
+      </view>
+      <view class="stat">
+        <text class="stat-value">01</text>
+        <text class="stat-label">进行中的项目</text>
+      </view>
+      <view class="stat">
+        <text class="stat-value">∞</text>
+        <text class="stat-label">保持好奇</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="skills-panel">
+    <view class="section-heading">
+      <text class="section-title">我正在做什么</text>
+      <text class="section-index">02</text>
+    </view>
+    <view class="skill-tabs">
+      <block wx:for="{{skills}}" wx:key="name">
+        <button class="skill-tab {{activeSkill === item.name ? 'skill-tab-active' : ''}}" data-skill="{{item.name}}" bindtap="selectSkill">{{item.name}}</button>
+      </block>
+    </view>
+    <block wx:for="{{skills}}" wx:key="name">
+      <text wx:if="{{activeSkill === item.name}}" class="skill-detail">{{item.detail}}</text>
+    </block>
+  </view>
+
+  <view class="action-row">
+    <button class="primary-action" bindtap="copyContact"><text class="action-icon">↗</text>复制简介</button>
+    <button class="secondary-action" open-type="share"><text class="action-icon">⇧</text>分享名片</button>
+  </view>
+
+  <view class="footer-note">
+    <view class="online-dot"></view>
+    <text>Open to learning and making</text>
+  </view>
+</scroll-view>
