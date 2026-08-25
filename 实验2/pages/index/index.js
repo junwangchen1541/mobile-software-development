@@ -2,20 +2,25 @@ Page({
   data: {
     isFavorite: false,
     expanded: false,
-    activeSkill: '小程序开发',
+    activeSkill: '深度学习',
     skills: [
       {
-        name: '小程序开发',
-        detail: '使用 WXML、WXSS 和 JavaScript 构建轻量、清晰的移动端体验。'
+        name: '深度学习',
+        detail: '使用 Python、PyTorch 和 NumPy 进行模型实验，关注算法从想法到结果的完整过程。'
       },
       {
-        name: '界面设计',
-        detail: '关注信息层级、阅读节奏和真实使用场景，让页面更容易理解。'
+        name: '遥感与视觉',
+        detail: '关注计算机视觉、遥感影像理解、高光谱影像分类与北极海冰预测。'
       },
       {
-        name: '持续学习',
-        detail: '把课程练习拆成可运行的小成果，在实践中积累解决问题的方法。'
+        name: '算法与竞赛',
+        detail: '通过算法与工程竞赛训练建模、编程和协作能力，把问题拆成可验证的步骤。'
       }
+    ],
+    highlights: [
+      { value: '2024', label: '中国海洋大学软件工程' },
+      { value: '08', label: '公开项目' },
+      { value: 'ACM', label: '社团主席' }
     ]
   },
 
@@ -45,7 +50,7 @@ Page({
 
   copyContact() {
     wx.setClipboardData({
-      data: '刘翼晨｜移动软件开发学习者',
+      data: '刘翼晨｜中国海洋大学软件工程｜深度学习与遥感视觉',
       success: () => {
         wx.showToast({ title: '简介已复制', icon: 'success' })
       }

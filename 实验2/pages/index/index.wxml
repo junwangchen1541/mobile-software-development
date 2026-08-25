@@ -3,9 +3,9 @@
     <image class="cover" src="/assets/card-header.svg" mode="aspectFill" />
     <view class="cover-shade"></view>
     <view class="cover-copy">
-      <text class="cover-kicker">PERSONAL CARD / 2026</text>
-      <text class="cover-title">把好奇心，做成小作品</text>
-      <text class="cover-caption">Mobile development learner</text>
+      <text class="cover-kicker">JUNWANGCHEN / PROFILE</text>
+      <text class="cover-title">让模型看见更大的世界</text>
+      <text class="cover-caption">Software engineering · AI · Remote sensing</text>
     </view>
   </view>
 
@@ -17,8 +17,8 @@
           <text class="name">刘翼晨</text>
           <text class="verified">在学习</text>
         </view>
-        <text class="role">移动软件开发学习者</text>
-        <text class="school">中国海洋大学 · 2026 夏</text>
+        <text class="role">软件工程本科生 · AI 探索者</text>
+        <text class="school">中国海洋大学计算机学院 · 2024 级</text>
       </view>
       <button class="favorite-button {{isFavorite ? 'favorite-active' : ''}}" bindtap="toggleFavorite" aria-label="收藏名片">
         <text>{{isFavorite ? '★' : '☆'}}</text>
@@ -32,30 +32,30 @@
         <text class="section-title">关于我</text>
         <text class="section-index">01</text>
       </view>
-      <text class="intro-text">我喜欢把抽象的想法做成能被点击、被理解的小作品。现在正在学习微信小程序开发，也在练习用更清晰的方式表达自己。</text>
-      <text wx:if="{{expanded}}" class="intro-more">从课程练习到个人项目，我希望保持记录和复盘，让每一次尝试都留下可见的进步。</text>
+      <text class="intro-text">我是中国海洋大学软件工程专业本科生，关注深度学习、计算机视觉与遥感智能，喜欢把复杂问题拆成可以验证的小实验。</text>
+      <text wx:if="{{expanded}}" class="intro-more">目前正在探索高光谱影像分类与北极海冰预测，也在用课程项目练习移动端开发，让研究与工程都能留下可运行的作品。</text>
       <button class="text-button" bindtap="toggleIntro">{{expanded ? '收起介绍' : '展开介绍'}} <text class="arrow">{{expanded ? '↑' : '↓'}}</text></button>
     </view>
 
     <view class="stats-row">
       <view class="stat">
         <text class="stat-value">03</text>
-        <text class="stat-label">学习方向</text>
+        <text class="stat-label">研究方向</text>
       </view>
       <view class="stat">
-        <text class="stat-value">01</text>
-        <text class="stat-label">进行中的项目</text>
+        <text class="stat-value">08</text>
+        <text class="stat-label">公开项目</text>
       </view>
       <view class="stat">
-        <text class="stat-value">∞</text>
-        <text class="stat-label">保持好奇</text>
+        <text class="stat-value">ACM</text>
+        <text class="stat-label">社团主席</text>
       </view>
     </view>
   </view>
 
   <view class="skills-panel">
     <view class="section-heading">
-      <text class="section-title">我正在做什么</text>
+      <text class="section-title">我正在探索什么</text>
       <text class="section-index">02</text>
     </view>
     <view class="skill-tabs">
@@ -66,6 +66,22 @@
     <block wx:for="{{skills}}" wx:key="name">
       <text wx:if="{{activeSkill === item.name}}" class="skill-detail">{{item.detail}}</text>
     </block>
+  </view>
+
+  <view class="highlights-panel">
+    <view class="section-heading">
+      <text class="section-title">一些可见的经历</text>
+      <text class="section-index">03</text>
+    </view>
+    <view class="highlight-grid">
+      <block wx:for="{{highlights}}" wx:key="label">
+        <view class="highlight-item">
+          <text class="highlight-value">{{item.value}}</text>
+          <text class="highlight-label">{{item.label}}</text>
+        </view>
+      </block>
+    </view>
+    <text class="honor-note">算法竞赛、工程实践和科研探索，都是我认识问题、解决问题的方式。</text>
   </view>
 
   <view class="action-row">
