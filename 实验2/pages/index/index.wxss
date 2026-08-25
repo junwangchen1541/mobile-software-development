@@ -122,23 +122,6 @@
   font-size: 21rpx;
 }
 
-.favorite-button {
-  width: 64rpx;
-  height: 64rpx;
-  margin: 0 0 0 18rpx;
-  padding: 0;
-  color: #9aa8b2;
-  background: #f3f6f7;
-  border-radius: 50%;
-  font-size: 38rpx;
-  line-height: 61rpx;
-}
-
-.favorite-active {
-  color: #e5a935;
-  background: #fff5dc;
-}
-
 .divider {
   height: 1rpx;
   margin: 32rpx 0;
@@ -176,6 +159,13 @@
   margin-top: 12rpx;
 }
 
+.intro-image {
+  width: 100%;
+  margin-top: 22rpx;
+  display: block;
+  border-radius: 6rpx;
+}
+
 .text-button {
   width: auto;
   height: 52rpx;
@@ -191,6 +181,14 @@
 .arrow {
   margin-left: 6rpx;
   font-size: 25rpx;
+}
+
+.github-link {
+  display: block;
+  margin-top: 8rpx;
+  color: #168673;
+  font-size: 22rpx;
+  line-height: 1.5;
 }
 
 .stats-row {

@@ -5,12 +5,13 @@
 ## 页面功能
 
 - 展示个人名片头图、姓名、身份和学校信息。
+- 展示个人介绍图片和 GitHub 主页链接。
 - 展示深度学习、遥感视觉和算法竞赛三个关注方向。
 - 展示公开项目数量、入学年份和 ACM 社团经历等公开信息。
 - 点击“展开介绍”查看完整个人简介。
 - 切换三个学习方向，查看对应说明。
-- 收藏名片，状态通过本地存储保留。
 - 复制一段不含隐私的公开简介。
+- 点击 GitHub 地址复制个人主页链接。
 - 使用微信原生分享能力转发名片。
 
 ## 导入运行
@@ -22,6 +23,7 @@
 ```text
 实验2/
 ├── assets/card-header.svg
+├── assets/personal-intro.jpg
 ├── app.js
 ├── app.json
 ├── app.wxss
@@ -34,4 +36,4 @@
     └── index.wxss
 ```
 
-`assets/card-header.svg` 是 16:9 的项目头图素材，后续可以替换为 AI 生成的 PNG，只需同步修改 `index.wxml` 中的 `image` 路径。
+`assets/card-header.svg` 是 16:9 的项目头图素材，`assets/personal-intro.jpg` 是个人介绍图片。两者都可以在 `index.wxml` 中替换为自己的视觉素材。

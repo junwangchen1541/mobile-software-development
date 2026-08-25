@@ -1,6 +1,5 @@
 Page({
   data: {
-    isFavorite: false,
     expanded: false,
     activeSkill: '深度学习',
     skills: [
@@ -24,12 +23,6 @@ Page({
     ]
   },
 
-  onLoad() {
-    this.setData({
-      isFavorite: wx.getStorageSync('lab2-card-favorite') === true
-    })
-  },
-
   toggleIntro() {
     this.setData({ expanded: !this.data.expanded })
   },
@@ -38,21 +31,20 @@ Page({
     this.setData({ activeSkill: event.currentTarget.dataset.skill })
   },
 
-  toggleFavorite() {
-    const isFavorite = !this.data.isFavorite
-    this.setData({ isFavorite })
-    wx.setStorageSync('lab2-card-favorite', isFavorite)
-    wx.showToast({
-      title: isFavorite ? '已收藏名片' : '已取消收藏',
-      icon: 'none'
-    })
-  },
-
   copyContact() {
     wx.setClipboardData({
       data: '刘翼晨｜中国海洋大学软件工程｜深度学习与遥感视觉',
       success: () => {
         wx.showToast({ title: '简介已复制', icon: 'success' })
+      }
+    })
+  },
+
+  copyGithub() {
+    wx.setClipboardData({
+      data: 'https://github.com/junwangchen1541',
+      success: () => {
+        wx.showToast({ title: 'GitHub 地址已复制', icon: 'success' })
       }
     })
   },

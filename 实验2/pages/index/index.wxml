@@ -20,9 +20,6 @@
         <text class="role">软件工程本科生 · AI 探索者</text>
         <text class="school">中国海洋大学计算机学院 · 2024 级</text>
       </view>
-      <button class="favorite-button {{isFavorite ? 'favorite-active' : ''}}" bindtap="toggleFavorite" aria-label="收藏名片">
-        <text>{{isFavorite ? '★' : '☆'}}</text>
-      </button>
     </view>
 
     <view class="divider"></view>
@@ -33,8 +30,10 @@
         <text class="section-index">01</text>
       </view>
       <text class="intro-text">我是中国海洋大学软件工程专业本科生，关注深度学习、计算机视觉与遥感智能，喜欢把复杂问题拆成可以验证的小实验。</text>
+      <image class="intro-image" src="/assets/personal-intro.jpg" mode="widthFix" />
       <text wx:if="{{expanded}}" class="intro-more">目前正在探索高光谱影像分类与北极海冰预测，也在用课程项目练习移动端开发，让研究与工程都能留下可运行的作品。</text>
       <button class="text-button" bindtap="toggleIntro">{{expanded ? '收起介绍' : '展开介绍'}} <text class="arrow">{{expanded ? '↑' : '↓'}}</text></button>
+      <text class="github-link" bindtap="copyGithub">github.com/junwangchen1541 ↗</text>
     </view>
 
     <view class="stats-row">
