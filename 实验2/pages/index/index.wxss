@@ -7,7 +7,7 @@
 
 .cover-wrap {
   position: relative;
-  height: 380rpx;
+  height: 422rpx;
   margin: 0 -28rpx;
   overflow: hidden;
 }
@@ -16,41 +16,6 @@
   width: 100%;
   height: 100%;
   display: block;
-}
-
-.cover-shade {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(14, 38, 61, 0.1), rgba(14, 38, 61, 0.28));
-}
-
-.cover-copy {
-  position: absolute;
-  left: 48rpx;
-  bottom: 44rpx;
-  display: flex;
-  flex-direction: column;
-  color: #ffffff;
-}
-
-.cover-kicker {
-  margin-bottom: 14rpx;
-  color: #b9e4d9;
-  font-size: 20rpx;
-  font-weight: 700;
-  letter-spacing: 1rpx;
-}
-
-.cover-title {
-  font-size: 45rpx;
-  font-weight: 700;
-  line-height: 1.3;
-}
-
-.cover-caption {
-  margin-top: 10rpx;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 22rpx;
 }
 
 .profile-panel,
@@ -157,13 +122,6 @@
 
 .intro-more {
   margin-top: 12rpx;
-}
-
-.intro-image {
-  width: 100%;
-  margin-top: 22rpx;
-  display: block;
-  border-radius: 6rpx;
 }
 
 .text-button {

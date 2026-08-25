@@ -5,7 +5,7 @@
 ## 页面功能
 
 - 展示个人名片头图、姓名、身份和学校信息。
-- 展示个人介绍图片和 GitHub 主页链接。
+- 使用个人介绍图片作为 16:9 名片头图，并展示 GitHub 主页链接。
 - 展示深度学习、遥感视觉和算法竞赛三个关注方向。
 - 展示公开项目数量、入学年份和 ACM 社团经历等公开信息。
 - 点击“展开介绍”查看完整个人简介。
@@ -36,4 +36,4 @@
     └── index.wxss
 ```
 
-`assets/card-header.svg` 是 16:9 的项目头图素材，`assets/personal-intro.jpg` 是个人介绍图片。两者都可以在 `index.wxml` 中替换为自己的视觉素材。
+`assets/personal-intro.jpg` 是页面顶部使用的 16:9 名片头图；`assets/card-header.svg` 是备用的项目头图素材。
