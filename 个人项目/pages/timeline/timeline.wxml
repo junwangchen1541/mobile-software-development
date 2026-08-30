@@ -1,0 +1,41 @@
+<view class="page-shell timeline-page">
+  <view class="timeline-header">
+    <text class="timeline-kicker">MY SUMMER TIMELINE</text>
+    <text class="timeline-title">沿着日期，重新走一遍夏天</text>
+    <text class="timeline-desc">有些成长发生在电脑前，也有些发生在海边、书页和谈话里。</text>
+  </view>
+
+  <scroll-view class="category-scroll" scroll-x enhanced show-scrollbar="{{false}}">
+    <view class="category-row">
+      <block wx:for="{{categories}}" wx:key="*this">
+        <button class="category-button {{activeCategory === item ? 'category-active' : ''}}" data-category="{{item}}" bindtap="selectCategory">{{item}}</button>
+      </block>
+    </view>
+  </scroll-view>
+
+  <scroll-view class="timeline-list" scroll-y enhanced>
+    <block wx:for="{{visibleMemories}}" wx:key="id">
+      <view class="timeline-item" data-id="{{item.id}}" bindtap="openDetail">
+        <view class="timeline-axis">
+          <view class="axis-dot" style="background: {{item.color}}"></view>
+          <view class="axis-line"></view>
+        </view>
+        <view class="timeline-content">
+          <view class="timeline-meta">
+            <text class="timeline-date">{{item.date}}</text>
+            <text class="timeline-category" style="color: {{item.color}}">{{item.category}}</text>
+          </view>
+          <view class="timeline-card">
+            <view class="timeline-icon" style="background: {{item.color}}">{{item.icon}}</view>
+            <view class="timeline-copy">
+              <text class="item-title">{{item.title}}</text>
+              <text class="item-summary">{{item.summary}}</text>
+              <text class="item-more">查看这段记忆 →</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view wx:if="{{visibleMemories.length === 0}}" class="empty-state">这个分类还没有记录</view>
+  </scroll-view>
+</view>

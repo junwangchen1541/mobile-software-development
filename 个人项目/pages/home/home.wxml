@@ -1,0 +1,64 @@
+<scroll-view class="page-shell home-page" scroll-y enhanced>
+  <view class="hero">
+    <view class="sun"></view>
+    <view class="wave wave-one"></view>
+    <view class="wave wave-two"></view>
+    <view class="hero-copy">
+      <text class="hero-eyebrow">SUMMER 2026 · QINGDAO</text>
+      <text class="hero-title">我的暑假生活</text>
+      <text class="hero-subtitle">在海风、代码和朋友之间，记录一个不算轰烈、但真实成长的夏天。</text>
+      <button class="hero-button" bindtap="openTimeline">查看夏日足迹 <text>→</text></button>
+    </view>
+    <view class="hero-date">
+      <text class="hero-date-number">07—08</text>
+      <text class="hero-date-label">两个月的生活切片</text>
+    </view>
+  </view>
+
+  <view class="stats-card">
+    <block wx:for="{{stats}}" wx:key="label">
+      <view class="stat-item">
+        <text class="stat-value">{{item.value}}</text>
+        <text class="stat-label">{{item.label}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="quote-card">
+    <text class="quote-mark">“</text>
+    <text class="quote-text">暑假不是一段等待开学的空白，而是重新认识时间、兴趣和自己的机会。</text>
+  </view>
+
+  <view class="section-heading featured-heading">
+    <view>
+      <text class="section-title">这个夏天发生了什么</text>
+      <text class="heading-note">娱乐、学习、研究和日常生活</text>
+    </view>
+    <text class="section-link" bindtap="openTimeline">全部记录</text>
+  </view>
+
+  <view class="featured-list">
+    <block wx:for="{{featured}}" wx:key="id">
+      <view class="memory-card" data-id="{{item.id}}" bindtap="openDetail">
+        <view class="memory-icon" style="background: {{item.color}}">{{item.icon}}</view>
+        <view class="memory-copy">
+          <view class="memory-meta">
+            <text class="memory-category">{{item.category}}</text>
+            <text class="memory-date">{{item.date}}</text>
+          </view>
+          <text class="memory-title">{{item.title}}</text>
+          <text class="memory-summary">{{item.summary}}</text>
+        </view>
+        <text class="memory-arrow">›</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="summary-banner" bindtap="openSummary">
+    <view>
+      <text class="summary-kicker">SUMMER NOTES</text>
+      <text class="summary-title">我从这个暑假学到了什么？</text>
+    </view>
+    <view class="summary-arrow">→</view>
+  </view>
+</scroll-view>

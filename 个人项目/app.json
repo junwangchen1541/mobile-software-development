@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/timeline/timeline",
+    "pages/detail/detail",
+    "pages/summary/summary"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#123d57",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "夏日足迹",
+    "backgroundColor": "#f4f7f5",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#7c898d",
+    "selectedColor": "#087f78",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/timeline/timeline",
+        "text": "足迹"
+      },
+      {
+        "pagePath": "pages/summary/summary",
+        "text": "总结"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

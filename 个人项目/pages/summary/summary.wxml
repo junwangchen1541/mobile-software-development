@@ -1,0 +1,59 @@
+<scroll-view class="page-shell summary-page" scroll-y enhanced>
+  <view class="summary-hero">
+    <text class="summary-eyebrow">SUMMER REFLECTION</text>
+    <text class="summary-main-title">这个夏天，</text>
+    <text class="summary-main-title summary-main-title-second">我留下了什么？</text>
+    <text class="summary-intro">它没有一条宏大的主线，却由许多小事组成：学习、研究、散步、阅读和见面。</text>
+  </view>
+
+  <view class="overview-card">
+    <view class="overview-primary">
+      <text class="overview-number">{{total}}</text>
+      <text class="overview-label">段生活记录</text>
+    </view>
+    <view class="overview-divider"></view>
+    <view class="overview-secondary">
+      <text class="overview-number small">{{favorites}}</text>
+      <text class="overview-label">个难忘时刻</text>
+    </view>
+  </view>
+
+  <view class="stats-section">
+    <view class="section-heading">
+      <text class="section-title">暑假的组成</text>
+      <text class="section-caption">按记录数量统计</text>
+    </view>
+    <block wx:for="{{stats}}" wx:key="name">
+      <view class="bar-row">
+        <text class="bar-label">{{item.name}}</text>
+        <view class="bar-track">
+          <view class="bar-fill bar-{{index}}" style="width: {{item.count / total * 100}}%"></view>
+        </view>
+        <text class="bar-value">{{item.count}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="lessons-section">
+    <view class="section-heading">
+      <text class="section-title">三点收获</text>
+      <text class="section-caption">写给开学后的自己</text>
+    </view>
+    <block wx:for="{{lessons}}" wx:key="number">
+      <view class="lesson-card">
+        <text class="lesson-number">{{item.number}}</text>
+        <view class="lesson-copy">
+          <text class="lesson-title">{{item.title}}</text>
+          <text class="lesson-text">{{item.text}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="final-note">
+    <text class="final-mark">夏</text>
+    <text class="final-text">如果一定要为这个暑假写一句结语，那就是：没有突然成为更厉害的人，但比假期开始时更清楚自己想继续做什么。</text>
+  </view>
+
+  <button class="timeline-action" bindtap="openTimeline">回看全部夏日足迹</button>
+</scroll-view>

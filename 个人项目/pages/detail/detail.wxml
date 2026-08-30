@@ -1,0 +1,37 @@
+<scroll-view wx:if="{{memory}}" class="detail-page" scroll-y enhanced>
+  <view class="detail-hero" style="background: linear-gradient(145deg, {{memory.color}}, #163e55)">
+    <text class="detail-icon">{{memory.icon}}</text>
+    <view class="detail-hero-copy">
+      <view class="detail-meta">
+        <text>{{memory.category}}</text>
+        <text>{{memory.fullDate}}</text>
+      </view>
+      <text class="detail-title">{{memory.title}}</text>
+      <text class="detail-summary">{{memory.summary}}</text>
+    </view>
+  </view>
+
+  <view class="detail-body">
+    <view class="story-section">
+      <text class="story-index">01</text>
+      <text class="story-title">发生了什么</text>
+      <text class="story-text">{{memory.content}}</text>
+    </view>
+
+    <view class="story-section learning-section">
+      <text class="story-index">02</text>
+      <text class="story-title">我学到了什么</text>
+      <text class="story-text">{{memory.learning}}</text>
+    </view>
+
+    <view class="feeling-card">
+      <text class="feeling-label">FEELING</text>
+      <text class="feeling-text">{{memory.feeling}}</text>
+    </view>
+
+    <view class="detail-actions">
+      <button class="favorite-action {{isFavorite ? 'favorite-active' : ''}}" bindtap="toggleFavorite">{{isFavorite ? '★ 已记住这一刻' : '☆ 记住这一刻'}}</button>
+      <button class="share-action" open-type="share">分享这段记忆</button>
+    </view>
+  </view>
+</scroll-view>

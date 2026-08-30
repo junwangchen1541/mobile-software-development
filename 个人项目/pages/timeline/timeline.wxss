@@ -1,0 +1,175 @@
+.timeline-page {
+  height: 100vh;
+  padding-top: 32rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-header {
+  padding: 26rpx 8rpx 30rpx;
+}
+
+.timeline-kicker {
+  color: #0b887e;
+  font-size: 19rpx;
+  font-weight: 700;
+  letter-spacing: 1rpx;
+}
+
+.timeline-title {
+  display: block;
+  margin-top: 18rpx;
+  color: #193542;
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.timeline-desc {
+  display: block;
+  margin-top: 14rpx;
+  color: #7c8a8d;
+  font-size: 23rpx;
+  line-height: 1.65;
+}
+
+.category-scroll {
+  width: 100%;
+  flex: none;
+  margin-bottom: 18rpx;
+  white-space: nowrap;
+}
+
+.category-row {
+  display: inline-flex;
+  gap: 14rpx;
+  padding: 0 4rpx 8rpx;
+}
+
+.category-button {
+  width: auto;
+  min-width: 112rpx;
+  height: 64rpx;
+  margin: 0;
+  padding: 0 28rpx;
+  color: #748286;
+  background: #e9efed;
+  border-radius: 32rpx;
+  font-size: 22rpx;
+  line-height: 64rpx;
+}
+
+.category-active {
+  color: #ffffff;
+  background: #087f78;
+}
+
+.timeline-list {
+  min-height: 0;
+  flex: 1;
+}
+
+.timeline-item {
+  display: flex;
+}
+
+.timeline-axis {
+  width: 34rpx;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.axis-dot {
+  width: 18rpx;
+  height: 18rpx;
+  margin-top: 13rpx;
+  border: 7rpx solid #f4f7f5;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2rpx #d7e0de;
+}
+
+.axis-line {
+  width: 2rpx;
+  min-height: 185rpx;
+  flex: 1;
+  background: #d7e0de;
+}
+
+.timeline-content {
+  min-width: 0;
+  flex: 1;
+  padding: 0 0 24rpx 18rpx;
+}
+
+.timeline-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12rpx;
+}
+
+.timeline-date {
+  color: #4c6269;
+  font-size: 23rpx;
+  font-weight: 700;
+}
+
+.timeline-category {
+  font-size: 20rpx;
+  font-weight: 600;
+}
+
+.timeline-card {
+  display: flex;
+  padding: 25rpx 24rpx;
+  background: #ffffff;
+  border-radius: 8rpx;
+  box-shadow: 0 8rpx 24rpx rgba(39, 69, 72, 0.05);
+}
+
+.timeline-icon {
+  width: 68rpx;
+  height: 68rpx;
+  flex: none;
+  color: #ffffff;
+  border-radius: 8rpx;
+  font-size: 25rpx;
+  font-weight: 700;
+  line-height: 68rpx;
+  text-align: center;
+}
+
+.timeline-copy {
+  min-width: 0;
+  margin-left: 20rpx;
+}
+
+.item-title {
+  display: block;
+  color: #193542;
+  font-size: 27rpx;
+  font-weight: 650;
+}
+
+.item-summary {
+  display: block;
+  margin-top: 10rpx;
+  color: #718083;
+  font-size: 21rpx;
+  line-height: 1.55;
+}
+
+.item-more {
+  display: block;
+  margin-top: 16rpx;
+  color: #0b887e;
+  font-size: 20rpx;
+}
+
+.empty-state {
+  padding: 80rpx 0;
+  color: #98a4a5;
+  font-size: 24rpx;
+  text-align: center;
+}

@@ -1,0 +1,12 @@
+{
+  "setting": {
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "enhance": true,
+    "compileHotReLoad": true
+  },
+  "compileType": "miniprogram",
+  "appid": "touristappid",
+  "projectname": "我的暑假生活"
+}
