@@ -1,0 +1,7 @@
+.my-login { height: 360rpx; background: #328EEB; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20rpx; }
+.my-login image { width: 170rpx; height: 170rpx; border-radius: 50%; }
+.my-login text { color: white; font-size: 34rpx; }
+.my-login button { width: 320rpx; }
+.my-favorite { padding: 24rpx 15rpx; }
+.favorite-title { font-size: 34rpx; font-weight: 700; padding: 18rpx 10rpx; }
+.empty { color: #888; text-align: center; padding: 80rpx 20rpx; }

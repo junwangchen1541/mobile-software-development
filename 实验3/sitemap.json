@@ -1,0 +1,1 @@
+{"desc":"高校新闻网实验3","rules":[{"action":"allow","page":"pages/index/index"},{"action":"allow","page":"pages/detail/detail"},{"action":"allow","page":"pages/my/my"}]}

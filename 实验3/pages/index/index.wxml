@@ -1,0 +1,11 @@
+<swiper class="hero-swiper" indicator-dots="true" autoplay="true" interval="5000" duration="500">
+  <block wx:for="{{swiperImg}}" wx:key="swiper{{index}}">
+    <swiper-item><image src="{{item.src}}" mode="aspectFill"></image></swiper-item>
+  </block>
+</swiper>
+<view class="news-list">
+  <view class="news-item" wx:for="{{newsList}}" wx:key="{{item.id}}">
+    <image src="{{item.poster}}" mode="aspectFill"></image>
+    <text bindtap="goToDetail" data-id="{{item.id}}">{{item.title}}——{{item.add_date}}</text>
+  </view>
+</view>

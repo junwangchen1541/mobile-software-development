@@ -1,0 +1,9 @@
+<view class="container" wx:if="{{article.id}}">
+  <view class="title">{{article.title}}</view>
+  <view class="add-date">{{article.add_date}}</view>
+  <view class="poster"><image src="{{article.poster}}" mode="widthFix"></image></view>
+  <view class="content"><text>{{article.content}}</text></view>
+  <button wx:if="{{isAdd}}" plain bindtap="cancelFavorites">❤️ 已收藏</button>
+  <button wx:else plain bindtap="addFavorites">❤️ 收藏新闻</button>
+</view>
+<view wx:else class="empty">未找到这条新闻</view>

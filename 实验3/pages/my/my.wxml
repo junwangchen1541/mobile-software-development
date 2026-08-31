@@ -1,0 +1,17 @@
+<view class="my-login">
+  <block wx:if="{{isLogin}}">
+    <image src="{{src}}" mode="aspectFill"></image>
+    <text>{{nickName}}</text>
+  </block>
+  <button wx:else bindtap="getUserInfo">未登录，点此登录</button>
+</view>
+<view class="my-favorite">
+  <view class="favorite-title">我的收藏（{{number}}）</view>
+  <view class="news-list" wx:if="{{newsList.length}}">
+    <view class="news-item" wx:for="{{newsList}}" wx:key="{{item.id}}">
+      <image src="{{item.poster}}" mode="aspectFill"></image>
+      <text bindtap="goToDetail" data-id="{{item.id}}">{{item.title}}——{{item.add_date}}</text>
+    </view>
+  </view>
+  <view wx:else class="empty">登录后收藏新闻，收藏内容会显示在这里</view>
+</view>
