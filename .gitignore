@@ -5,6 +5,9 @@ project.private.config.json
 # Local dependencies and operating-system files
 node_modules/
 **/node_modules/
+**/build/
+**/.hvigor/
+**/.idea/
 .DS_Store
 Thumbs.db
 
@@ -12,3 +15,4 @@ Thumbs.db
 /实验*.md
 /实验报告图片/
 /实验2/个人介绍.png
+/个人项目/汇报/

@@ -1,0 +1,163 @@
+.profile-page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 28rpx;
+  background: #f4f7f5;
+}
+
+.profile-hero {
+  display: flex;
+  align-items: center;
+  padding: 38rpx 32rpx;
+  color: #ffffff;
+  background: linear-gradient(145deg, #123d57, #087f78);
+  border-radius: 10rpx;
+}
+
+.avatar {
+  width: 112rpx;
+  height: 112rpx;
+  flex: none;
+  overflow: hidden;
+  background: #f0b75a;
+  border: 5rpx solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 48rpx;
+  font-weight: 700;
+  line-height: 112rpx;
+  text-align: center;
+}
+
+.avatar image {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-copy {
+  min-width: 0;
+  margin-left: 24rpx;
+}
+
+.profile-kicker {
+  color: #aee9df;
+  font-size: 19rpx;
+  font-weight: 700;
+}
+
+.profile-name {
+  display: block;
+  margin-top: 12rpx;
+  font-size: 38rpx;
+  font-weight: 700;
+}
+
+.profile-desc {
+  display: block;
+  margin-top: 10rpx;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 22rpx;
+  line-height: 1.55;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 14rpx;
+  margin-top: 22rpx;
+}
+
+.primary-button,
+.secondary-button,
+.timeline-link {
+  height: 78rpx;
+  margin: 0;
+  padding: 0;
+  border-radius: 6rpx;
+  font-size: 24rpx;
+  line-height: 78rpx;
+}
+
+.primary-button {
+  flex: 1;
+  color: #ffffff;
+  background: #087f78;
+}
+
+.secondary-button {
+  width: 180rpx;
+  color: #607175;
+  background: #e7eeeb;
+}
+
+.profile-section {
+  margin-top: 42rpx;
+}
+
+.post-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14rpx;
+  padding: 22rpx;
+  background: #ffffff;
+  border-radius: 8rpx;
+}
+
+.post-icon {
+  width: 70rpx;
+  height: 70rpx;
+  flex: none;
+  border-radius: 8rpx;
+  color: #ffffff;
+  font-size: 25rpx;
+  font-weight: 700;
+  line-height: 70rpx;
+  text-align: center;
+}
+
+.post-copy {
+  min-width: 0;
+  flex: 1;
+  margin-left: 20rpx;
+}
+
+.post-title,
+.post-meta {
+  display: block;
+}
+
+.post-title {
+  overflow: hidden;
+  color: #193542;
+  font-size: 26rpx;
+  font-weight: 650;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.post-meta {
+  margin-top: 8rpx;
+  color: #8a9999;
+  font-size: 20rpx;
+}
+
+.post-arrow {
+  margin-left: 14rpx;
+  color: #b7c2c0;
+  font-size: 36rpx;
+}
+
+.empty-profile {
+  padding: 44rpx 16rpx;
+  color: #89999a;
+  background: #ffffff;
+  border-radius: 8rpx;
+  font-size: 23rpx;
+  text-align: center;
+}
+
+.timeline-link {
+  width: 100%;
+  margin-top: 26rpx;
+  color: #193542;
+  background: #ffffff;
+}

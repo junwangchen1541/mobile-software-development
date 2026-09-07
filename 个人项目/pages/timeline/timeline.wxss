@@ -173,3 +173,16 @@
   font-size: 24rpx;
   text-align: center;
 }
+
+.publish-button {
+  width: 100%;
+  height: 82rpx;
+  flex: none;
+  margin: 18rpx 0 20rpx;
+  padding: 0;
+  color: #ffffff;
+  background: #087f78;
+  border-radius: 6rpx;
+  font-size: 25rpx;
+  line-height: 82rpx;
+}

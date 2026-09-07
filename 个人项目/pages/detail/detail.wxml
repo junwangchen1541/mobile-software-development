@@ -3,7 +3,7 @@
     <text class="detail-icon">{{memory.icon}}</text>
     <view class="detail-hero-copy">
       <view class="detail-meta">
-        <text>{{memory.category}}</text>
+        <text>{{memory.author || '夏日用户'}} · {{memory.category}}</text>
         <text>{{memory.fullDate}}</text>
       </view>
       <text class="detail-title">{{memory.title}}</text>
@@ -24,14 +24,53 @@
       <text class="story-text">{{memory.learning}}</text>
     </view>
 
+    <view wx:if="{{memory.imagePath}}" class="story-section image-section">
+      <text class="story-index">03</text>
+      <text class="story-title">配图</text>
+      <image class="memory-image" src="{{memory.imagePath}}" mode="widthFix"></image>
+    </view>
+
     <view class="feeling-card">
       <text class="feeling-label">FEELING</text>
       <text class="feeling-text">{{memory.feeling}}</text>
     </view>
 
     <view class="detail-actions">
-      <button class="favorite-action {{isFavorite ? 'favorite-active' : ''}}" bindtap="toggleFavorite">{{isFavorite ? '★ 已记住这一刻' : '☆ 记住这一刻'}}</button>
+      <button class="like-action {{interaction.liked ? 'like-active' : ''}}" bindtap="toggleLike">{{interaction.liked ? '♥' : '♡'}} {{interaction.likes}}</button>
       <button class="share-action" open-type="share">分享这段记忆</button>
+    </view>
+
+    <view wx:if="{{isOwner}}" class="owner-actions">
+      <button bindtap="editMemory">编辑我的记录</button>
+      <button bindtap="deleteMemory">删除</button>
+    </view>
+
+    <view class="comments-section">
+      <view class="comments-heading">
+        <text class="story-title">评论交流</text>
+        <text class="comments-count">{{interaction.comments.length}} 条</text>
+      </view>
+      <view class="comment-editor">
+        <input value="{{commentText}}" bindinput="onCommentInput" placeholder="写下你的想法" maxlength="120" />
+        <button bindtap="submitComment">发布</button>
+      </view>
+      <block wx:for="{{interaction.comments}}" wx:key="id">
+        <view class="comment-item">
+          <view class="comment-meta"><text>{{item.author}}</text><text>读者</text></view>
+          <text class="comment-text">{{item.text}}</text>
+          <view class="comment-tools">
+            <text bindtap="showReply" data-index="{{index}}">回复</text>
+          </view>
+          <block wx:for="{{item.replies}}" wx:for-item="reply" wx:key="id">
+            <view class="reply-item"><text class="reply-author">{{reply.author}}：</text><text>{{reply.text}}</text></view>
+          </block>
+          <view wx:if="{{replyIndex === index}}" class="reply-editor">
+            <input value="{{replyText}}" bindinput="onReplyInput" placeholder="回复这条评论" maxlength="100" />
+            <button bindtap="submitReply" data-index="{{index}}">发送</button>
+          </view>
+        </view>
+      </block>
+      <view wx:if="{{interaction.comments.length === 0}}" class="comments-empty">还没有评论，来留下第一句回应吧</view>
     </view>
   </view>
 </scroll-view>

@@ -63,6 +63,17 @@
   margin-top: 20rpx;
 }
 
+.image-section {
+  margin-top: 20rpx;
+}
+
+.memory-image {
+  display: block;
+  width: 100%;
+  margin-top: 18rpx;
+  border-radius: 6rpx;
+}
+
 .story-index {
   position: absolute;
   right: 28rpx;
@@ -114,8 +125,8 @@
   margin-top: 28rpx;
 }
 
-.favorite-action,
-.share-action {
+.share-action,
+.like-action {
   flex: 1;
   height: 82rpx;
   margin: 0;
@@ -125,17 +136,144 @@
   line-height: 82rpx;
 }
 
-.favorite-action {
-  color: #087f78;
-  background: #e2f3ef;
+.like-action {
+  color: #c26861;
+  background: #fff0ee;
 }
 
-.favorite-active {
-  color: #8a6825;
-  background: #fff0c8;
+.like-active {
+  color: #ffffff;
+  background: #d47771;
 }
 
 .share-action {
   color: #ffffff;
   background: #193f54;
+}
+
+.owner-actions {
+  display: flex;
+  gap: 16rpx;
+  margin-top: 16rpx;
+}
+
+.owner-actions button {
+  flex: 1;
+  height: 68rpx;
+  margin: 0;
+  padding: 0;
+  color: #52676c;
+  background: #edf2f0;
+  border-radius: 6rpx;
+  font-size: 22rpx;
+  line-height: 68rpx;
+}
+
+.comments-section {
+  margin-top: 34rpx;
+}
+
+.comments-heading,
+.comment-meta,
+.comment-tools,
+.comment-editor,
+.reply-editor {
+  display: flex;
+  align-items: center;
+}
+
+.comments-heading {
+  justify-content: space-between;
+  margin-bottom: 18rpx;
+}
+
+.comments-count {
+  color: #91a0a2;
+  font-size: 21rpx;
+}
+
+.comment-editor,
+.reply-editor {
+  gap: 12rpx;
+}
+
+.comment-editor input,
+.reply-editor input {
+  min-width: 0;
+  flex: 1;
+  height: 72rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  color: #41565c;
+  background: #ffffff;
+  border: 1rpx solid #dbe5e2;
+  border-radius: 6rpx;
+  font-size: 23rpx;
+}
+
+.comment-editor button,
+.reply-editor button {
+  width: 110rpx;
+  height: 72rpx;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  background: #087f78;
+  border-radius: 6rpx;
+  font-size: 22rpx;
+  line-height: 72rpx;
+}
+
+.comment-item {
+  margin-top: 16rpx;
+  padding: 24rpx;
+  background: #ffffff;
+  border-radius: 8rpx;
+}
+
+.comment-meta {
+  justify-content: space-between;
+  color: #668078;
+  font-size: 21rpx;
+}
+
+.comment-text {
+  display: block;
+  margin-top: 12rpx;
+  color: #51656b;
+  font-size: 24rpx;
+  line-height: 1.65;
+}
+
+.comment-tools {
+  justify-content: flex-end;
+  margin-top: 12rpx;
+  color: #087f78;
+  font-size: 20rpx;
+}
+
+.reply-item {
+  margin-top: 12rpx;
+  padding: 14rpx 16rpx;
+  color: #6d7c7f;
+  background: #f4f8f6;
+  border-radius: 5rpx;
+  font-size: 21rpx;
+  line-height: 1.55;
+}
+
+.reply-author {
+  color: #087f78;
+  font-weight: 600;
+}
+
+.reply-editor {
+  margin-top: 14rpx;
+}
+
+.comments-empty {
+  padding: 36rpx 0;
+  color: #9aa6a6;
+  font-size: 22rpx;
+  text-align: center;
 }

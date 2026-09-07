@@ -1,0 +1,10 @@
+{
+  "modelVersion": "5.0.0",
+  "name": "entry",
+  "version": "1.0.0",
+  "description": "夏日计算器入口模块",
+  "main": "",
+  "author": "",
+  "license": "",
+  "dependencies": {}
+}

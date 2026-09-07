@@ -2,8 +2,8 @@
   <view class="summary-hero">
     <text class="summary-eyebrow">SUMMER REFLECTION</text>
     <text class="summary-main-title">这个夏天，</text>
-    <text class="summary-main-title summary-main-title-second">我留下了什么？</text>
-    <text class="summary-intro">它没有一条宏大的主线，却由许多小事组成：学习、研究、散步、阅读和见面。</text>
+    <text class="summary-main-title summary-main-title-second">我们留下了什么？</text>
+    <text class="summary-intro">每个人都可以把自己的学习、研究、阅读和生活片段，汇成一段可被看见的夏天。</text>
   </view>
 
   <view class="overview-card">
@@ -13,8 +13,8 @@
     </view>
     <view class="overview-divider"></view>
     <view class="overview-secondary">
-      <text class="overview-number small">{{favorites}}</text>
-      <text class="overview-label">个难忘时刻</text>
+      <text class="overview-number small">{{userPosts}}</text>
+      <text class="overview-label">条用户发布</text>
     </view>
   </view>
 
@@ -37,7 +37,7 @@
   <view class="lessons-section">
     <view class="section-heading">
       <text class="section-title">三点收获</text>
-      <text class="section-caption">写给开学后的自己</text>
+      <text class="section-caption">来自暑假记录的共同体会</text>
     </view>
     <block wx:for="{{lessons}}" wx:key="number">
       <view class="lesson-card">

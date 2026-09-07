@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "鸿蒙计算器实验模块"
+    },
+    {
+      "name": "entry_desc",
+      "value": "夏日计算器入口"
+    },
+    {
+      "name": "entry_label",
+      "value": "夏日计算器"
+    }
+  ]
+}

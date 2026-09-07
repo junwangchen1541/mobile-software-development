@@ -1,13 +1,21 @@
-const { memories } = require('../../data/memories')
+const { getAllMemories } = require('../../data/store')
 
 Page({
   data: {
-    featured: memories.slice(0, 3),
+    featured: [],
     stats: [
-      { value: memories.length, label: '段暑假记录' },
+      { value: 0, label: '段暑假记录' },
       { value: 4, label: '种生活侧面' },
       { value: 3, label: '项主要收获' }
     ]
+  },
+
+  onShow() {
+    const allMemories = getAllMemories()
+    this.setData({
+      featured: allMemories.slice(0, 3),
+      'stats[0].value': allMemories.length
+    })
   },
 
   openTimeline() {
@@ -16,6 +24,10 @@ Page({
 
   openSummary() {
     wx.switchTab({ url: '/pages/summary/summary' })
+  },
+
+  openProfile() {
+    wx.navigateTo({ url: '/pages/profile/profile' })
   },
 
   openDetail(event) {

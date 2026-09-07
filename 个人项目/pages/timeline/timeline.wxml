@@ -1,8 +1,8 @@
 <view class="page-shell timeline-page">
   <view class="timeline-header">
-    <text class="timeline-kicker">MY SUMMER TIMELINE</text>
-    <text class="timeline-title">沿着日期，重新走一遍夏天</text>
-    <text class="timeline-desc">有些成长发生在电脑前，也有些发生在海边、书页和谈话里。</text>
+    <text class="timeline-kicker">COMMUNITY TIMELINE</text>
+    <text class="timeline-title">看看大家的夏日足迹</text>
+    <text class="timeline-desc">按分类发现别人的经历，也分享自己的暑假故事。</text>
   </view>
 
   <scroll-view class="category-scroll" scroll-x enhanced show-scrollbar="{{false}}">
@@ -23,7 +23,7 @@
         <view class="timeline-content">
           <view class="timeline-meta">
             <text class="timeline-date">{{item.date}}</text>
-            <text class="timeline-category" style="color: {{item.color}}">{{item.category}}</text>
+            <text class="timeline-category" style="color: {{item.color}}">{{item.author || '夏日用户'}} · {{item.category}}</text>
           </view>
           <view class="timeline-card">
             <view class="timeline-icon" style="background: {{item.color}}">{{item.icon}}</view>
@@ -38,4 +38,5 @@
     </block>
     <view wx:if="{{visibleMemories.length === 0}}" class="empty-state">这个分类还没有记录</view>
   </scroll-view>
+  <button class="publish-button" bindtap="openEditor">＋ 发布我的足迹</button>
 </view>

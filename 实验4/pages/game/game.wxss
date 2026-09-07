@@ -1,0 +1,126 @@
+.container {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 30rpx 32rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-header {
+  width: 640rpx;
+  max-width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 22rpx;
+}
+
+.eyebrow,
+.title {
+  display: block;
+}
+
+.eyebrow {
+  color: #e64340;
+  font-size: 21rpx;
+  font-weight: 700;
+}
+
+.title {
+  margin-top: 4rpx;
+  color: #202630;
+  font-size: 42rpx;
+  font-weight: 700;
+}
+
+.step-badge {
+  min-width: 104rpx;
+  padding: 10rpx 15rpx;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1rpx solid #e1e4e8;
+  border-radius: 8rpx;
+  text-align: center;
+}
+
+.step-number {
+  color: #202630;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+
+.step-label {
+  margin-left: 5rpx;
+  color: #747b85;
+  font-size: 22rpx;
+}
+
+.board-shell {
+  width: 640rpx;
+  height: 640rpx;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  overflow: hidden;
+  background: #dceff3;
+  border: 2rpx solid #c5d7dc;
+  border-radius: 8rpx;
+  box-shadow: 0 12rpx 34rpx rgba(31, 38, 48, 0.12);
+}
+
+.game-canvas {
+  width: 640rpx;
+  height: 640rpx;
+  max-width: 100%;
+}
+
+.controls {
+  margin-top: 28rpx;
+}
+
+.middle-row {
+  display: flex;
+  gap: 18rpx;
+  margin-top: 14rpx;
+}
+
+.direction {
+  width: 108rpx;
+  height: 88rpx;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #343b45;
+  border-radius: 8rpx;
+  color: #ffffff;
+  font-size: 42rpx;
+  font-weight: 600;
+  line-height: 88rpx;
+}
+
+.direction.up {
+  margin: 0 auto;
+}
+
+.restart {
+  width: 342rpx;
+  height: 82rpx;
+  margin-top: 24rpx;
+  padding: 0;
+  background: #e64340;
+  border-radius: 8rpx;
+  color: #ffffff;
+  font-size: 29rpx;
+  font-weight: 600;
+  line-height: 82rpx;
+}
+
+.tip {
+  margin-top: 18rpx;
+  color: #7a818b;
+  font-size: 23rpx;
+  line-height: 1.5;
+  text-align: center;
+}

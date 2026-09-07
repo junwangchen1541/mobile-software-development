@@ -6,8 +6,11 @@
     <view class="hero-copy">
       <text class="hero-eyebrow">SUMMER 2026 · QINGDAO</text>
       <text class="hero-title">我的暑假生活</text>
-      <text class="hero-subtitle">在海风、代码和朋友之间，记录一个不算轰烈、但真实成长的夏天。</text>
-      <button class="hero-button" bindtap="openTimeline">查看夏日足迹 <text>→</text></button>
+      <text class="hero-subtitle">记录、发现和回应，让每个人真实的暑假生活都能被看见。</text>
+      <view class="hero-actions">
+        <button class="hero-button" bindtap="openTimeline">浏览大家的足迹 <text>→</text></button>
+        <button class="hero-secondary" bindtap="openProfile">我的主页</button>
+      </view>
     </view>
     <view class="hero-date">
       <text class="hero-date-number">07—08</text>
@@ -32,7 +35,7 @@
   <view class="section-heading featured-heading">
     <view>
       <text class="section-title">这个夏天发生了什么</text>
-      <text class="heading-note">娱乐、学习、研究和日常生活</text>
+      <text class="heading-note">来自不同用户的娱乐、学习、研究和生活</text>
     </view>
     <text class="section-link" bindtap="openTimeline">全部记录</text>
   </view>
@@ -57,7 +60,7 @@
   <view class="summary-banner" bindtap="openSummary">
     <view>
       <text class="summary-kicker">SUMMER NOTES</text>
-      <text class="summary-title">我从这个暑假学到了什么？</text>
+      <text class="summary-title">大家在这个暑假留下了什么？</text>
     </view>
     <view class="summary-arrow">→</view>
   </view>

@@ -1,0 +1,60 @@
+<scroll-view class="editor-page" scroll-y enhanced>
+  <view class="editor-intro">
+    <text class="editor-kicker">WRITE YOUR SUMMER</text>
+    <text class="editor-title">{{editing ? '编辑这段足迹' : '发布一段足迹'}}</text>
+    <text class="editor-desc">记录发生了什么、学到了什么，以及它给你的感受。</text>
+  </view>
+
+  <view class="form-card">
+    <view class="field-group">
+      <text class="field-label">日期</text>
+      <input class="field-input" data-field="date" value="{{date}}" bindinput="onInput" placeholder="例如：2026年8月20日" />
+    </view>
+
+    <view class="field-group">
+      <text class="field-label">分类</text>
+      <picker mode="selector" range="{{categories}}" value="{{categoryIndex}}" bindchange="onCategoryChange">
+        <view class="picker-value">{{categories[categoryIndex]}} <text>⌄</text></view>
+      </picker>
+    </view>
+
+    <view class="field-group">
+      <text class="field-label">标题</text>
+      <input class="field-input" data-field="title" value="{{title}}" bindinput="onInput" placeholder="给这段经历一个标题" maxlength="40" />
+    </view>
+
+    <view class="field-group">
+      <text class="field-label">一句话摘要</text>
+      <input class="field-input" data-field="summary" value="{{summary}}" bindinput="onInput" placeholder="让别人快速了解这段经历" maxlength="80" />
+    </view>
+
+    <view class="field-group">
+      <text class="field-label">发生了什么</text>
+      <textarea class="field-textarea" data-field="content" value="{{content}}" bindinput="onInput" placeholder="具体写下这次经历" maxlength="500" auto-height></textarea>
+    </view>
+
+    <view class="field-group">
+      <text class="field-label">我学到了什么</text>
+      <textarea class="field-textarea" data-field="learning" value="{{learning}}" bindinput="onInput" placeholder="写下你的收获" maxlength="300" auto-height></textarea>
+    </view>
+
+    <view class="field-group">
+      <text class="field-label">感受与体会</text>
+      <textarea class="field-textarea" data-field="feeling" value="{{feeling}}" bindinput="onInput" placeholder="留下此刻的感受" maxlength="300" auto-height></textarea>
+    </view>
+
+    <view class="field-group">
+      <view class="field-label-row">
+        <text class="field-label">配一张图片</text>
+        <text class="field-hint">可选，图片不会写入主包</text>
+      </view>
+      <view wx:if="{{imagePath}}" class="image-preview-wrap">
+        <image class="image-preview" src="{{imagePath}}" mode="aspectFill"></image>
+        <button class="remove-image" bindtap="removeImage">移除图片</button>
+      </view>
+      <button wx:else class="image-button" bindtap="chooseImage">＋ 从手机选择图片</button>
+    </view>
+
+    <button class="submit-button" bindtap="submit">{{editing ? '保存修改' : '发布足迹'}}</button>
+  </view>
+</scroll-view>

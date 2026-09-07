@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="game-header">
+    <view>
+      <text class="eyebrow">SOKOBAN</text>
+      <text class="title">第 {{level}} 关</text>
+    </view>
+    <view class="step-badge">
+      <text class="step-number">{{steps}}</text>
+      <text class="step-label">步</text>
+    </view>
+  </view>
+
+  <view class="board-shell">
+    <canvas class="game-canvas" canvas-id="gameCanvas" id="gameCanvas" width="320" height="320"></canvas>
+  </view>
+
+  <view class="controls" aria-label="游戏方向控制">
+    <button class="direction up" bindtap="up" aria-label="向上">↑</button>
+    <view class="middle-row">
+      <button class="direction" bindtap="left" aria-label="向左">←</button>
+      <button class="direction" bindtap="down" aria-label="向下">↓</button>
+      <button class="direction" bindtap="right" aria-label="向右">→</button>
+    </view>
+  </view>
+
+  <button class="restart" bindtap="restartGame">重新开始</button>
+  <text class="tip">将所有箱子推到小猪所在的目标点即可过关</text>
+</view>

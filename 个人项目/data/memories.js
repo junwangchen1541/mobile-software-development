@@ -1,19 +1,21 @@
 const memories = [
   {
     id: 1,
+    author: '社区示例用户',
     date: '07.10',
     fullDate: '2026年7月10日',
     category: '娱乐',
     icon: '海',
     color: '#4b9fb5',
-    title: '傍晚去海边走一走',
-    summary: '沿着海岸慢慢散步，看日落把海面染成金色。',
-    content: '没有安排任务，只带着耳机沿海边散步。海风、浪声和逐渐变暗的天空，让连续学习后的节奏慢了下来。',
-    learning: '真正的休息不是一直刷手机，而是暂时离开屏幕，让注意力重新回到身边。',
-    feeling: '娱乐和放松并不是浪费时间。得到充分休息以后，反而更愿意重新开始学习。'
+    title: '给假期留一点放松时间',
+    summary: '在学习和研究之外，给自己留出恢复精力的时间。',
+    content: '暑假并没有把每天排得很满。我会在完成当天任务后主动停下来，整理房间、听音乐或看看电影，让注意力从高强度任务中退出。',
+    learning: '稳定的节奏需要学习和休息共同维持，适当留白反而能让后续投入更专注。',
+    feeling: '放松不是对计划的偏离，而是让长期目标能够持续推进的一部分。'
   },
   {
     id: 2,
+    author: '社区示例用户',
     date: '07.18',
     fullDate: '2026年7月18日',
     category: '学习',
@@ -27,6 +29,7 @@ const memories = [
   },
   {
     id: 3,
+    author: '社区示例用户',
     date: '07.27',
     fullDate: '2026年7月27日',
     category: '学习',
@@ -40,6 +43,7 @@ const memories = [
   },
   {
     id: 4,
+    author: '社区示例用户',
     date: '08.05',
     fullDate: '2026年8月5日',
     category: '研究',
@@ -53,6 +57,7 @@ const memories = [
   },
   {
     id: 5,
+    author: '社区示例用户',
     date: '08.14',
     fullDate: '2026年8月14日',
     category: '生活',
@@ -66,6 +71,7 @@ const memories = [
   },
   {
     id: 6,
+    author: '社区示例用户',
     date: '08.22',
     fullDate: '2026年8月22日',
     category: '娱乐',

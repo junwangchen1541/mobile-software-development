@@ -1,10 +1,11 @@
-const { memories, getStats } = require('../../data/memories')
+const { categories } = require('../../data/memories')
+const { getAllMemories } = require('../../data/store')
 
 Page({
   data: {
-    total: memories.length,
-    stats: getStats(),
-    favorites: 0,
+    total: 0,
+    stats: [],
+    userPosts: 0,
     lessons: [
       {
         number: '01',
@@ -19,14 +20,22 @@ Page({
       {
         number: '03',
         title: '休息、交流与学习同样重要',
-        text: '海边散步、阅读和见朋友并不与成长冲突，它们让生活保持弹性和温度。'
+        text: '阅读、交流和适度休息并不与成长冲突，它们让生活保持弹性和温度。'
       }
     ]
   },
 
   onShow() {
-    const favorites = wx.getStorageSync('summer-favorites') || []
-    this.setData({ favorites: favorites.length })
+    const allMemories = getAllMemories()
+    const userPosts = allMemories.filter(item => item.ownerId).length
+    this.setData({
+      total: allMemories.length,
+      stats: categories.slice(1).map(name => ({
+        name,
+        count: allMemories.filter(item => item.category === name).length
+      })),
+      userPosts
+    })
   },
 
   openTimeline() {

@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="heading">
+    <text class="title">游戏选关</text>
+    <text class="subtitle">选择一个关卡，帮助小鸟把箱子推到全部目标点</text>
+  </view>
+
+  <view class="level-grid">
+    <view
+      class="level-card"
+      wx:for="{{levels}}"
+      wx:key="name"
+      bindtap="chooseLevel"
+      data-level="{{index}}"
+      hover-class="level-card-active"
+    >
+      <image class="level-image" src="/images/{{item.image}}" mode="aspectFill"></image>
+      <view class="level-meta">
+        <text class="level-name">{{item.name}}</text>
+        <text class="level-action">开始挑战 ›</text>
+      </view>
+    </view>
+  </view>
+</view>

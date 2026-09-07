@@ -1,0 +1,46 @@
+<scroll-view class="profile-page" scroll-y enhanced>
+  <view class="profile-hero">
+    <view class="avatar">
+      <image wx:if="{{user.avatarUrl}}" src="{{user.avatarUrl}}" mode="aspectFill"></image>
+      <text wx:else>夏</text>
+    </view>
+    <view class="profile-copy" wx:if="{{user}}">
+      <text class="profile-kicker">SUMMER MEMBER</text>
+      <text class="profile-name">{{user.nickname}}</text>
+      <text class="profile-desc">分享自己的经历，也看看别人的夏天。</text>
+    </view>
+    <view class="profile-copy" wx:else>
+      <text class="profile-kicker">JOIN THE COMMUNITY</text>
+      <text class="profile-name">登录夏日足迹</text>
+      <text class="profile-desc">登录后发布、编辑和管理自己的暑假记录。</text>
+    </view>
+  </view>
+
+  <view class="profile-actions">
+    <button wx:if="{{!user}}" class="primary-button" bindtap="login">微信登录</button>
+    <block wx:else>
+      <button class="primary-button" bindtap="createPost">＋ 发布一条足迹</button>
+      <button class="secondary-button" bindtap="logout">退出登录</button>
+    </block>
+  </view>
+
+  <view class="profile-section">
+    <view class="section-heading">
+      <text class="section-title">我的发布</text>
+      <text class="section-caption">{{posts.length}} 条记录</text>
+    </view>
+    <block wx:for="{{posts}}" wx:key="id">
+      <view class="post-row" bindtap="editPost" data-id="{{item.id}}">
+        <view class="post-icon" style="background: {{item.color}}">{{item.icon}}</view>
+        <view class="post-copy">
+          <text class="post-title">{{item.title}}</text>
+          <text class="post-meta">{{item.date}} · {{item.category}}</text>
+        </view>
+        <text class="post-arrow">›</text>
+      </view>
+    </block>
+    <view wx:if="{{posts.length === 0}}" class="empty-profile">登录后，你发布的足迹会出现在这里。</view>
+  </view>
+
+  <button class="timeline-link" bindtap="openTimeline">浏览社区足迹</button>
+</scroll-view>

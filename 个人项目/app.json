@@ -3,7 +3,9 @@
     "pages/home/home",
     "pages/timeline/timeline",
     "pages/detail/detail",
-    "pages/summary/summary"
+    "pages/summary/summary",
+    "pages/profile/profile",
+    "pages/editor/editor"
   ],
   "window": {
     "navigationBarBackgroundColor": "#123d57",
