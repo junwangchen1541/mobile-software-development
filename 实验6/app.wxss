@@ -1,0 +1,31 @@
+page { background: #f3f8f8; color: #173f56; font-family: Arial, sans-serif; }
+.container { min-height: 100vh; padding: 24rpx 28rpx 140rpx; box-sizing: border-box; }
+.topbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28rpx; }
+.brand { font-size: 40rpx; font-weight: 700; }
+.subtitle { color: #6c8589; font-size: 24rpx; margin-top: 6rpx; }
+.button { background: #087f78; color: white; border-radius: 14rpx; font-size: 28rpx; }
+.mini { width: 132rpx; height: 62rpx; line-height: 62rpx; padding: 0; margin: 0; font-size: 24rpx; }
+.button::after { border: none; }
+.ghost { background: white; color: #087f78; border: 1rpx solid #a8d2cc; }
+.card { background: white; border-radius: 18rpx; margin-bottom: 24rpx; overflow: hidden; box-shadow: 0 8rpx 24rpx rgba(23,63,86,.08); }
+.card-head { display: flex; align-items: center; padding: 20rpx 22rpx; }
+.avatar { width: 72rpx; height: 72rpx; border-radius: 50%; background: #d9eeee; }
+.user-info { margin-left: 16rpx; flex: 1; }
+.nick { font-size: 28rpx; font-weight: 700; }
+.address { color: #7c9295; font-size: 22rpx; margin-top: 5rpx; }
+.photo { display: block; width: 100%; height: 420rpx; background: #e6eeee; }
+.card-foot { display: flex; justify-content: space-between; padding: 18rpx 22rpx; color: #718487; font-size: 24rpx; }
+.empty { text-align: center; color: #7c9295; padding: 120rpx 0; }
+.float-btn { position: fixed; right: 30rpx; bottom: 42rpx; width: 118rpx; height: 78rpx; line-height: 78rpx; border-radius: 40rpx; z-index: 5; }
+.section-title { font-size: 30rpx; font-weight: 700; margin: 28rpx 0 18rpx; }
+.profile { text-align: center; padding: 30rpx 0 24rpx; }
+.profile-strip { display: flex; align-items: center; background: #e6f2ef; border-radius: 16rpx; padding: 18rpx 22rpx; }
+.profile .avatar { width: 150rpx; height: 150rpx; margin: 0 auto 18rpx; }
+.profile-name { font-size: 32rpx; font-weight: 700; }
+.detail-photo { width: 100%; height: 560rpx; background: #dfeaea; }
+.actions { padding: 24rpx; }
+.actions button { margin-bottom: 18rpx; }
+.upload-box { border: 2rpx dashed #9bcac4; border-radius: 16rpx; padding: 26rpx; text-align: center; color: #668286; margin-bottom: 22rpx; }
+.caption-input { background: white; border-radius: 14rpx; padding: 20rpx; margin-bottom: 22rpx; box-sizing: border-box; }
+.history-grid { display: flex; flex-wrap: wrap; gap: 10rpx; }
+.history-image { width: 220rpx; height: 180rpx; object-fit: cover; border-radius: 10rpx; }

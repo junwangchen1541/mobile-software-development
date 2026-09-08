@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="topbar"><view><view class="brand">图片分享社区</view><view class="subtitle">记录此刻，也看见别人的世界</view></view><button class="button ghost mini" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button></view>
+  <view class="profile-strip" wx:if="{{user}}"><image class="avatar" src="{{user.avatarUrl}}"/><view><view class="nick">{{user.nickName}}</view><view class="address">欢迎回来，分享一张照片吧</view></view></view>
+  <view class="section-title">最新分享</view>
+  <block wx:for="{{photos}}" wx:key="key"><view class="card"><view class="card-head"><navigator class="user-info" url="/pages/homepage/homepage?openid={{item._openid}}"><image class="avatar" src="{{item.avatarUrl}}"/><view class="user-info"><view class="nick">{{item.nickName}}</view><view class="address">{{item.province}} · {{item.country}}</view></view></navigator></view><navigator url="/pages/detail/detail?id={{item.key}}"><image class="photo" src="{{item.photoUrl}}" mode="aspectFill"/></navigator><view class="card-foot"><text>{{item.addDate}}</text><text>{{item.caption}}</text></view></view></block>
+  <view class="empty" wx:if="{{!photos.length}}">还没有图片，成为第一个分享者吧</view>
+  <button class="button float-btn" bindtap="goAdd">＋ 上传</button>
+</view>

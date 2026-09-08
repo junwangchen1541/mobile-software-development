@@ -1,0 +1,1 @@
+{ "desc": "图片分享社区", "rules": [{ "action": "allow", "page": "*" }] }
